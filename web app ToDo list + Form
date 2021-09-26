@@ -1,2 +1,118 @@
 course; https://conectaempleo-formacion.fundaciontelefonica.com/mi-perfil
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Task Manager v1.0</title>
+</head>
+<body>
+<h1>Task Manager v1.0</h1>
+<div>
+	<form action="http://127.0.0.1/login_usuario" method="post" target="_self">
+	<div>
+		<label>User name</label>
+		<input type="text" id="user_name" name="user_name">
+	</div>
+	<div>
+		<label>e-mail</label>
+		<input type="text" id="email" name="email">
+	</div>	
+	<div>
+		<label>Name</label>
+		<input type="text" id="name" name="name">
+	</div>
+	<div>
+		<label>Lastname</label>
+		<input type="text" id="lastname" name="lastname">	
+	</div>
+	<div>
+		<label>Password</label>
+		<input type="password" id="" name="">	
+	</div>
+	<div>
+		<label>Repeat password</label>
+		<input type="password" id="repeat_password" name="repeat_password">	
+	</div>
+	<div>
+		<button type="submit">LogIn</button>
+	</div>
+
+
+	</form>
+<br></br>
+</div>
+<section>
+	<table>
+		<thead>
+			<th id="t_id"></th>
+			<th id="t_name"></th>
+			<th id="t_todo"></th>
+			<th id="t_prog"></th>
+			<th id="t_done"></th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1.</td>
+				<td class="name">Laundry</td>
+				<td class="ico">X</td>
+				<td class="ico"></td>
+				<td class="ico"></td>
+			</tr>
+			<tr>
+				<td>2.</td>
+				<td class="name">Pet shop</td>
+				<td class="ico"></td>
+				<td class="ico">X</td>
+				<td class="ico"></td>
+			</tr>
+			<tr>
+				<td>3.</td>
+				<td class="name">Send work email</td>
+				<td class="ico"></td>
+				<td class="ico"></td>
+				<td class="ico">X</td>
+			</tr>
+		</tbody>
+	</table>
+
+</section>
+
+<form>
+	<h2>Task information</h2>
+	<div id="name">
+		<label for="task_name">Task</label>
+		<input type="text" id="task_name" name="task_name">
+	</div>
+	<label>Status</label>
+	<div id="state">
+		<input type="checkbox" id="task_todo" name="task_state" value="todo">
+		<label for="task_todo">ToDo</label>
+		
+		<input type="checkbox" id="task_prog" name="task_state" value="progress">
+		<label for="task_prog">In Progress</label>
+		
+		<input type="checkbox" id="task_done" name="task_state" value="done">
+		<label for="task_done">Done</label>
+	</div>
+	<div>
+	<label>or Select status from this list;</label>
+	<select>
+		<option value="todo2">ToDo</option>
+		<option value="progress2">in Progress</option>
+		<option value="done2">Done</option>
+	</select>
+	</div>
+	<div id="detail">
+		<label id="task_detail">Please enter task detail;</label>
+		<textarea id="task_detail" name="task_detail" rows="5" cols="50">enter text here</textarea>
+	</div>
+	<div class="button">
+		<button type="submit">Save & send changes >></button>
+	</div>
+	
+
+</form>
+
+</body>
+</html>
