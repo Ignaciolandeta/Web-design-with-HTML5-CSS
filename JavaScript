@@ -1,2 +1,153 @@
 check course; https://conectaempleo-formacion.fundaciontelefonica.com/mi-perfil
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript demos</title>
+</head>
+<body>
+<h1>Hello! this is a simple JavaScript inside HTML file	 demo</h1>
+
+<!-- JavaScript internal EVENTS; -->
+<input type="button" value="Click on me!" onclick="alert('Thanx!');" />
+<input type="text" onmouseover="alert('Has pasado con el raton');">
+
+<div id="contenido" style="width:180px; height:80px; border:thin solid silver" 
+onmouseover="this.style.borderColor='green';" onmouseout="this.style.borderColor='red';">
+Content section! testing .JS events</div>
+
+<!-- JavaScript external EVENTS, functions; -->
+<script>
+    function testonclick(){alert('Thanx!');}
+</script>
+<input type="button" value="Onclick event!" onclick="testonclick()"/>
+
+<!-- JS Semantic events -->
+<script>
+    // Función externa
+    function muestra() {alert('Thanx!');}
+    // Asignar la función externa al elemento
+    document.getElementById('boton').onclick = muestra;
+</script>
+<!-- Elemento XHTML -->
+<input id="boton" type="button" value="Test onclick" />
+
+<div id="domtest">
+</div>
+
+<script src="dom.js"></script>
+
+<script>
+    document.write("'document.write' javaScript testing...")
+</script>
+
+<p>Goodby!</p>
+</body>
+</html>
+
+
+/*dom.js file*/
+var p = document.createElement("p")
+p.innerHTML = "This is a DOM JS appendChild test"
+
+document.getElementById("domtest").appendChild(p)
+
+
+
+
+/* Some JavaScript basics; var Types and loops*/
+
+for (var i=0; i<10; i++){
+    console.log("Hello world! number secuence...", i);
+}
+
+
+var numbers = [1,2,3]
+for (i in numbers){
+    var a = numbers[i];
+    console.log("Number secuence;", i);
+
+}
+
+var varlength = "Hello world!"
+var lenght = varlength.length
+console.log(lenght)
+
+
+var txt1 = "Hello "
+var txt2 = "world"
+var concat = txt1 + txt2
+console.log(concat);
+
+var txt3 = "Hello "
+var concat2 = txt3.concat("World!!!!!!");
+console.log(concat2)
+
+var txt4 = "Hi there Messi, this is the number for you..."
+var num = 10
+var sum = txt4 + num
+console.log(sum)
+
+
+var txt5 = "Hello"
+var pos = txt5.indexOf('o')
+console.log(pos)
+
+var txt6 = "Substring java function"
+var str = txt6.substring(3,20)
+console.log(str)
+
+var v=['1','2','3','4','5']
+var len = v.length
+v2 = v.concat(6,7,8)
+console.log(len)
+console.log(v2)
+
+
+/* JSON Java Script Object Notation '{}' examples; */
+var json = {"firstname": "Ignacio", "lastname":"Landeta"}
+console.log(json.lastname)
+
+var client = {
+    "id": "111111",
+    "name": "maria",
+    "lastname": "jimenez",
+    "age": "22",
+    "active": true     
+}
+console.log(client.id)
+console.log(client.name)
+console.log(client.lastname)
+console.log(client.age)
+console.log(client.active)
+
+var carinfo = {
+    "colors": ["red", "white", "blue"],
+    "doors": ["2","4"]
+};
+console.log(carinfo.colors[1]);
+
+
+var myjson = {
+    "name": {
+            "first": "beau",
+            "last": "Carnes",       
+    },
+    "age": 33,
+    "skills": ["juggling", "stiltwalking", "coding"],
+    "married": true,
+    "superpowers": null   
+}
+// stringify method (transform Json to string)
+var stringified = JSON.stringify(myjson)
+console.log(stringified);
+
+// parse method (transform string to Json)
+var stringjson = '{"first": "beau", "last": "Carnes"}';
+var parsejson = JSON.parse(stringjson);
+console.log(parsejson)
+
+
+
+
+
