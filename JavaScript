@@ -1,9 +1,41 @@
 check course; https://conectaempleo-formacion.fundaciontelefonica.com/mi-perfil
 
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>JavaScript demos</title>
+
+    <title>JavaScript demos</title>
+
+    <style>
+        .golden{
+            background: darkgoldenrod;
+        }
+    </style>
+
+    <link rel="stylesheet" href="jquerydomstyle.css" type="text/css"/>
+
+    <style>
+        .red{
+            color: red;
+        }
+
+        .big{
+            font-size: 36px;
+        }
+    </style>
+
+
+<!-- jQuery download and test. jQuery simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation -->
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            alert("jQuery alert test")
+
+        });
+    </script>
+
 </head>
 <body>
 <h1>Hello! this is a simple JavaScript inside HTML file	 demo</h1>
@@ -41,9 +73,136 @@ Content section! testing .JS events</div>
     document.write("'document.write' javaScript testing...")
 </script>
 
+<!-- AJAX Asynchronous JavaScript and XML 
+    AJAX in JavaScript allows you to update parts of a web page without reloading the entire page. 
+This is a example with vanilla JavaScript (not JQery);-->
+
+<h1>This is an AJAX with vanilla JavaScript example;</h1>
+<p id="demoajax">Lets AJAX change this text by pressing the button....!</p>
+<button type="button" onclick="loadDoc()">Press to change content</button>
+
+<script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demoajax").innerHTML = this.responseText;
+            }
+        };
+
+        xhttp.open("GET",
+        "http://carnes.cc/code/ajax_example.txt", true);
+        xhttp.send();
+
+    }
+</script>
+
+<!-- Getting started with jQuery - SELECTORS; -->
+<h1>Below are some jQuery SELECTORS test examples;</h1>
+<p id="p1">This paragraph has the id <b>id</b> 'p1' and is going to hide when click the button</p>
+<p class="cla">This paragraph has the id <b>class</b> 'cla' and is going to hide when click the button</p>
+<div class="cla">This div has the class 'cla' and is going to hide when click the button</div>
+
+<button>Click me to hide text</button>
+
+<script>
+    $(document).ready(function(){
+
+        $("button").click(function(){
+            $(".cla").hide();
+// other events examples; $("p").hide();    $("h1").click(function(){ $("button").hide();  //
+        });
+    });
+</script>
+
+<!-- Getting started with jQuery - EVENTS; -->
+<h1>Below are some jQuery EVENTS test examples;</h1>
+<p id="ev">Alert is going to pop-up when you <b>click</b> paragraph</p>
+
+<script>
+    $(function(){
+        $("p").click(function(){
+            console.log("U have clicked a paragraph!")
+        });
+    });
+// other type events; dblclick, mouseenter, mouseleave, mousedown, mouseup, hover        
+</script>
+
+<!-- Getting started with jQuery - EFFECTS; -->
+<h1 class="title">Below are some jQuery EFFECTS examples;</h1>
+<img src="jqueryimg.JPG">
+<p class="pef">this are some jQuery <b>'effects'</b> demo tests... </p>
+
+<script>
+$("img").hide("slow");
+$("img").show("normal");
+
+$(".title").hide(500);
+$(".title").show(1500);
+
+$(".title").slideUp(500);
+$(".title").slideDown("fast");
+
+$(".title").hide();
+$(".title").fadeIn(2000).addClass("golden")
+
+$(".pef").fadeOut(500);
+$(".pef").fadeIn("normal");
+
+$("img").toggle(500);
+$("img").toggle("normal");
+
+$(".pef").hide(500).delay(1000).show(300);
+
+</script>
+
+<!-- Getting started with jQuery - ADDING AND REMOVING elements from DOM. Use jQuery to add and remove DOM elements with append, prepend, after, and before. -->
+<h1>Below are some jQuery DOM elements examples;</h1>
+<div class="target">
+    <p class="filter">This 'div' is a target for all sort of things</p>
+    <p>It doesnt even know what could happend to it</p>
+</div>
+<script type="text/javascript" src="jquerydomtest.js"></script>
+
+<!-- Getting started with jQuery - CSS and Classes -->
+<h1>Below are some jQuery CSS & Classes examples;</h1>
+<h2 class="red">heading 2</h2>
+
+<p>This is a test paragraph</p>
+<p class="big">This is another CSS test paragraph</p>
+
+<button>Click to change CSS with jQuery!</button>
+
+<script>
+    $("button").click(function(){
+        $(".big").css({
+            fontSize: "100px",
+            color: "blue",
+            backgroundColor: "yellow",
+        });        
+        
+        // console.log($(".big").css("font-size"));
+    });
+</script>
+
+
+<!-- AJAX with jQuery.
+Query allows you to use AJAX with a lot less code than vanilla JavaScript. 
+Also it automatically makes your code work across different browsers. 
+Learn all about how to use AJAX with jQuery using the load, get, and post method-->
+
+<h1>This is an AJAX with jQuery example;</h1>
+<p id="demoajaxjquery">Lets AJAX with jQuery change this text by pressing the button....!</p>
+<button type="button" onclick="loadDoc()">Press to change 'p' content</button>
+
+<script type="text/javascript" src="jqueryajax.js"></script>
+
+
+
 <p>Goodby!</p>
 </body>
 </html>
+
 
 
 /*dom.js file*/
