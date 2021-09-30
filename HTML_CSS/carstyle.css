@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+table {border-collapse: collapse;
+	
+}
+
+td, tr {text-align: center;
+	vertical-align: middle;
+	border: solid gray 1px;
+	height: 30px;
+	width: 200px;
+	
+}
+
+#r1 {background: orange;
+	font-weight: bold;
+	
+	
+}
+
+#r2 {background: cornflowerblue;
+	
+}
+
+#r3 {background: lightblue;
+	
+}

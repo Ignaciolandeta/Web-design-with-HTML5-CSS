@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+section {background-color: gray;
+		margin: 5px;
+		padding: 5px
+		}
+		
+article {background-color: lime;
+		width: 300px;
+		height: 100px;
+		margin: 5px;
+		padding: 5px
+		}
+		
+#s1 article {float: right;}
+#s1 {overflow: hidden;}
