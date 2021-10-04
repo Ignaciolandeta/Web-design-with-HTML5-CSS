@@ -4,4 +4,4 @@ Also JavaScript for client-side web application coding, form data validation, AJ
 
 Course content: 
 HTML5 & CSS = https://conectaempleo-formacion.fundaciontelefonica.com/en/web/gl-diseno-web-con-html5-css-ft-ed-4
-JavaScript = 
+JavaScript = https://conectaempleo-formacion.fundaciontelefonica.com/en/web/gl-programacion-con-javascript-ft-ed-4
