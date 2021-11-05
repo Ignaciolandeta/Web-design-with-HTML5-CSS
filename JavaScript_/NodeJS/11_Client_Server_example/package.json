@@ -1,0 +1,20 @@
+{
+  "name": "11_client_server_example",
+  "version": "1.0.0",
+  "description": "Client_Server example NodeJS coding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Client_Server",
+    "example",
+    "NodeJS",
+    "coding"
+  ],
+  "author": "Ignacio Landeta",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
